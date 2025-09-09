@@ -5,3 +5,7 @@ outputs/*
 tests/*
 CLAUDE*
 
+# Python
+*.pyc
+__pycache__/
+

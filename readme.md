@@ -45,16 +45,15 @@ For detailed installation instructions and troubleshooting, see [docs/install.md
 
 ## Pretrained Model
 
-Download the pretrained model from [Google Drive](https://drive.google.com/file/d/1gmiteFcio4pXPNWGIBrspclX5dCofRtv/view?usp=drive_link) and put it in the `logs/4DGT/checkpoints` folder.
-The trained model should be available at `logs/4DGT/checkpoints/last.pth`.
-Notably, the rendering results will later be saved to the same `logs/4DGT/tests/bowl` folder.
-
-You can possibly use `gdown` for this operation:
-
+Download the pretrained model from [Hugging Face](https://huggingface.co/zhaoyang-lv-meta/4DGT/tree/main):
 ```bash
+# Create the checkpoint directory
 mkdir -p logs/4DGT/checkpoints
-gdown 1gmiteFcio4pXPNWGIBrspclX5dCofRtv -O logs/4DGT/checkpoints/last.pth
+
+# Download the checkpoint
+wget https://huggingface.co/zhaoyang-lv-meta/4DGT/resolve/main/last.pth -O logs/4DGT/checkpoints/last.pth
 ```
+The trained model should be available at `logs/4DGT/checkpoints/last.pth`.
 
 ## Data Format
 
