@@ -55,20 +55,15 @@ wget https://huggingface.co/zhaoyang-lv-meta/4DGT/resolve/main/last.pth -O logs/
 ```
 The trained model should be available at `logs/4DGT/checkpoints/last.pth`.
 
-## Data Format
-
-See [docs/data.md](docs/data.md) for detailed specifications on:
-- Input data format (transforms.json structure)
-- Dataloader output format (tensor shapes and keys)
-- Validation and testing procedures
 
 ### Aria Datasets
 
-We provide two examples of converting a typical Aria recording in `.vrs` to the format recognized by *4DGT*.
+We provide two examples of converting a typical Aria recording in `.vrs` to the format recognized by *4DGT*. For details of the data format being processed, check [docs/data.md](docs/data.md).
 
-#### Run on Aria sequence from Aria Explorer
 
-We use the sequence from [the Aria explorer](https://explorer.projectaria.com/aea/loc3_script3_seq1_rec1?st=%220%22) from Aria Everyday Activity as an example. This will apply to generally any sequences to be found downloaded from Aria Explorer.
+#### Run on an Aria sequence from Aria Explorer
+
+We use the sequence from [the Aria explorer](https://explorer.projectaria.com/aea/loc3_script3_seq1_rec1?st=%220%22) from Aria Everyday Activity as an example. This will apply to generally any sequences to be found downloaded from Aria Explorer. 
 
 ```bash
 mkdir -p data/aea 
