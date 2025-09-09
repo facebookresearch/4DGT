@@ -29,7 +29,7 @@ MPS_FOLDER=${MPS_FOLDER="$DATA_INPUT_DIR/mps/slam"}
 # The rectified RGB size 2400x2400 is the default we value we benchmark all reconstuction in the paper. 
 # You can adjust this value (with the focal) that fits best for your applications. 
 # For half-resolution (1408x1408) recordings, using focal ~600 and rgb_size as ~1000 is a recommended range.
-python scripts/extract_aria_vrs.py \
+python tlod/scripts/extract_aria_vrs.py \
     --input_root $DATA_INPUT_DIR \
     --output_root $DATA_PROCESSED_DIR \
     --vrs_file $VRS_FILE \

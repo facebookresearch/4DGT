@@ -36,7 +36,7 @@ We propose 4DGT, a 4D Gaussian-based Transformer model for dynamic scene reconst
 Use the automated installation script:
 
 ```bash
-bash scripts/install.sh
+bash tlod/scripts/install.sh
 ```
 
 This script will interactively guide you through setting up the conda environment and installing all dependencies including PyTorch, flash-attention, and apex.
