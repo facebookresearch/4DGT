@@ -1,0 +1,7 @@
+data/
+debug/
+logs/*
+outputs/*
+tests/*
+CLAUDE*
+
