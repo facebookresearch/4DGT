@@ -1,0 +1,74 @@
+# 4DGT Configuration File
+
+# Main settings
+mode: TEST
+config: configs/models/tlod-l3.py  # Configuration file for the model
+exp_root: logs  # Path to save logs and checkpoints
+exp_name: exp_4dgt_full  # Experiment name
+
+# Dataset settings
+# Input image resolution (single value or [H, W])
+input_image_res: 504
+# Output image resolution (single value or [H, W])
+output_image_res: 504
+# Data path (required - must be specified at runtime)
+data_path: null
+# Checkpoints directory
+checkpoints_dir: checkpoints
+# Subset of sequences for training and testing (required - must be specified at runtime)
+seq_list: null
+# Root of data inside a particular sequence (can be string or list)
+seq_data_root: recording/camera-rgb-rectified-600-h1000
+# Timestamp conversion to seconds
+loaded_to_seconds: 1.0e9
+# Distance conversion to meters
+loaded_to_meters: 1.0
+# Whether to do novel time sampling
+novel_time_sampling: true
+# Whether to do interpolation for output view for better visualization
+novel_view_interp_input: false
+# Whether to rotate RGB data
+rotate_rgb: true
+# Update novel time sampling rate for some datasets
+novel_time_frame_sample: [0, null, 2]
+# Whether to align all cameras to canonical coordinate
+align_cameras: true
+# Sequence sampling [start, end, step]
+seq_sample: [0, null, 1]
+# Frame sampling [start, end, step]
+frame_sample: [0, null, 1]
+# View sampling [start, end, step]
+view_sample: [0, 1, 1]
+# Force reloading things
+force_reload: false
+# Novel view timestamps for testing
+novel_view_timestamps: []
+# Novel view spiral window size
+novel_view_spiral_window: 32
+# Sample interval for frames
+sample_interval: 128
+# The prefix to add to the evaluation image output
+eval_prefix: ""
+
+# Inference settings
+# Input image number per batch
+image_num_per_batch: 128  # For TEST mode: number of input views/frames
+# Output image num
+output_image_num: 128  # For TEST mode: number of output views/frames
+# Path to the checkpoint (will auto-download if not found)
+checkpoint: checkpoints/4dgt_full.pth
+# Number of data loader workers
+num_workers: 10
+# Use persistent workers for data loading
+persistent_workers: true
+# Random seed
+seed: 0
+
+# Viewer-specific settings (optional, only used by run_viewer.py)
+# viewer_port: 8080  # Port for the viewer server
+# max_render_size: 512  # Maximum render resolution for viewer
+
+# Other settings for compatibility with main.py and other scripts
+# These are not used by run.py or run_viewer.py but may be needed by other scripts
+test_images_dir: test_images
+training_images_dir: training_images

@@ -1,0 +1,13 @@
+data/
+debug/
+logs/*
+outputs/*
+tests/*
+checkpoints/*
+shells/*
+CLAUDE*
+
+# Python
+*.pyc
+__pycache__/
+
