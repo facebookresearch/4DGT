@@ -1,15 +1,17 @@
 --extra-index-url https://download.pytorch.org/whl/cu124
 torch>=2.1.0
-ninja
+# ninja
 transformers
 huggingface-hub
 torchvision
 torchaudio
-sunds>=0.4.1
-tensorflow>=2.6
+# sunds>=0.4.1
+# tensorflow>=2.6
 einops>=0.4.1
-wandb
+# wandb
 pyyaml
+ruamel.yaml
+h5py
 imageio
 matplotlib
 tqdm
@@ -19,8 +21,8 @@ torchmetrics
 fvcore
 iopath
 lpips
-packaging
-ninja
+# packaging
+# ninja
 rich
 numpy<2.0
 plyfile
@@ -30,25 +32,28 @@ imageio[ffmpeg]
 scikit-image
 projectaria-tools[all]
 splines
-lightning
-lightning[pytorch-extra]
-natsort
+# lightning
+# lightning[pytorch-extra]
+# natsort
 plyfile
 PyMCubes
 rembg
-accelerate
-kornia
-viser>=0.2.3
-gsplat>=1.2.0
-nerfview
+hydra-core
+# accelerate
+# kornia
+# viser>=0.2.3
+# gsplat>=1.2.0
+viser
+gsplat
+# nerfview
 open3d
-openexr-python
-diffusers
+# openexr-python
+# diffusers
 
-gpustat # for monitoring gpu usage easily
-colossalai # for traing LVSM
-openai-clip
-openai
+# gpustat # for monitoring gpu usage easily
+# colossalai # for traing LVSM
+# openai-clip
+# openai
 
 # For configs
 mmengine

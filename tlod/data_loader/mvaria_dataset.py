@@ -59,10 +59,10 @@ class AriaDataset(Dataset):
         seq_sample: Tuple[Optional[int]] = (0, None, 1),
         frame_sample: Tuple[Optional[int]] = (0, None, 1),
         view_sample: Tuple[Optional[int]] = (0, 1, 1),
-        sample_interval: int = 1,
+        sample_interval: int = 128,
         seq_data_roots: Tuple[str] = ("camera-rgb-rectified-600-h1000",),
         video_file: str = "videos.mp4",
-        vignette_file: str = "vignette.png",
+        vignette_file: str = "no_vignette.png",
         transforms_file: str = "transforms.json",
         seq_list: str = "",
         align_cameras: bool = False,
@@ -291,9 +291,7 @@ class AriaDataset(Dataset):
 
 
     def __len__(self):
-        return (
-            self.cumsum_lengths[-1] * self.batch_image_num
-        ) 
+        return self.cumsum_lengths[-1]
 
     def __getitem__(self, idx: int):  # noqa: C901
         idx = idx % self.cumsum_lengths[-1]

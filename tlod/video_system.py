@@ -26,7 +26,7 @@ import threading
 
 from tlod.misc import utils
 from tlod.misc.io_helper import mkdirs
-from tlod.easyvolcap.utils.console_utils import blue, green
+from tlod.easyvolcap.utils.console_utils import logger, blue, green
 from tlod.easyvolcap.utils.data_utils import dotdict
 # fmt: on
 
@@ -38,8 +38,6 @@ def norm_to_uint8(array):
         array = array.cpu().numpy()
     return (np.clip(array, 0, 1) * 255).astype(np.uint8)
 
-
-logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -63,7 +61,7 @@ class SaveConfig:
     save_as_video: bool = False  # Save as video instead of individual images
 
     # Video settings
-    video_fps: int = 10
+    video_fps: int = 30
     video_codec: str = 'h264'
     video_quality: int = 8  # 0-10, higher is better
 

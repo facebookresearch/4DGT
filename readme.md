@@ -57,7 +57,7 @@ For detailed installation instructions and troubleshooting, see [docs/install.md
 You can find the pretrained model from [Hugging Face](https://huggingface.co/projectaria/4DGT/) and download manually via:
 ```bash
 # By default, the downloaded model will be saved to checkpoints/4dgt_full.pth
-python tlod/download_model.py
+python -m tlod.download_model
 ```
 
 You can also skip this step and it will automatically download it when executing the following commands.
