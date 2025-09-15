@@ -191,7 +191,7 @@ def run_inference(demo: FourDGTDemo,
                 save_raw=cfg.get('save_raw', True),
                 save_visualization=cfg.get('save_visualization', True),
                 save_as_video=cfg.get('save_as_video', True),  # Default to video
-                video_fps=cfg.get('video_fps', 10),
+                video_fps=cfg.get('video_fps', 30),
                 video_codec=cfg.get('video_codec', 'h264'),
                 video_quality=cfg.get('video_quality', 8),
                 process_in_chunks=cfg.get('process_in_chunks', True),

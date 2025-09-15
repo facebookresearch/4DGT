@@ -10,6 +10,8 @@ torchaudio
 einops>=0.4.1
 # wandb
 pyyaml
+ruamel.yaml
+h5py
 imageio
 matplotlib
 tqdm
@@ -36,6 +38,7 @@ splines
 plyfile
 PyMCubes
 rembg
+hydra-core
 # accelerate
 # kornia
 # viser>=0.2.3
