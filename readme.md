@@ -1,6 +1,8 @@
 <div align="center">
 
 <h3> 4DGT: Learning a 4D Gaussian Transformer Using Real-World Monocular Videos </h3>
+<h4>NeurIPS 2025 (Spotlight)</h4>
+
 <a href="https://arxiv.org/abs/2506.08015">
   <img src="https://img.shields.io/badge/2506.08015-arXiv-red" alt="arXiv">
 </a>
